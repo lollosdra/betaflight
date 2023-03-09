@@ -83,62 +83,62 @@
 #endif
 #endif // STM32F4
 
-#ifdef STM32F7
-#define USE_ITCM_RAM
-#define ITCM_RAM_OPTIMISATION "-O2", "-freorder-blocks-algorithm=simple"
-#define USE_FAST_DATA
-#define USE_RPM_FILTER
-#define USE_DYN_IDLE
-#define USE_DYN_NOTCH_FILTER
-#define USE_OVERCLOCK
-#define USE_ADC_INTERNAL
-#define USE_USB_CDC_HID
-#define USE_USB_MSC
-#define USE_PERSISTENT_MSC_RTC
-#define USE_MCO
-#define USE_DMA_SPEC
-#define USE_TIMER_MGMT
-#define USE_PERSISTENT_OBJECTS
-#define USE_CUSTOM_DEFAULTS_ADDRESS
-#define USE_LATE_TASK_STATISTICS
-#endif // STM32F7
+// #ifdef STM32F7
+// #define USE_ITCM_RAM
+// #define ITCM_RAM_OPTIMISATION "-O2", "-freorder-blocks-algorithm=simple"
+// #define USE_FAST_DATA
+// #define USE_RPM_FILTER
+// #define USE_DYN_IDLE
+// #define USE_DYN_NOTCH_FILTER
+// #define USE_OVERCLOCK
+// #define USE_ADC_INTERNAL
+// #define USE_USB_CDC_HID
+// #define USE_USB_MSC
+// #define USE_PERSISTENT_MSC_RTC
+// #define USE_MCO
+// #define USE_DMA_SPEC
+// #define USE_TIMER_MGMT
+// #define USE_PERSISTENT_OBJECTS
+// #define USE_CUSTOM_DEFAULTS_ADDRESS
+// #define USE_LATE_TASK_STATISTICS
+// #endif // STM32F7
 
-#ifdef STM32H7
+// #ifdef STM32H7
 
-#ifdef USE_DSHOT
-#define USE_DSHOT_CACHE_MGMT
-#endif
+// #ifdef USE_DSHOT
+// #define USE_DSHOT_CACHE_MGMT
+// #endif
 
-#define USE_ITCM_RAM
-#define USE_FAST_DATA
-#define USE_RPM_FILTER
-#define USE_DYN_IDLE
-#define USE_DYN_NOTCH_FILTER
-#define USE_ADC_INTERNAL
-#define USE_USB_CDC_HID
-#define USE_DMA_SPEC
-#define USE_TIMER_MGMT
-#define USE_PERSISTENT_OBJECTS
-#define USE_DMA_RAM
-#define USE_USB_MSC
-#define USE_RTC_TIME
-#define USE_PERSISTENT_MSC_RTC
-#define USE_LATE_TASK_STATISTICS
-#endif
+// #define USE_ITCM_RAM
+// #define USE_FAST_DATA
+// #define USE_RPM_FILTER
+// #define USE_DYN_IDLE
+// #define USE_DYN_NOTCH_FILTER
+// #define USE_ADC_INTERNAL
+// #define USE_USB_CDC_HID
+// #define USE_DMA_SPEC
+// #define USE_TIMER_MGMT
+// #define USE_PERSISTENT_OBJECTS
+// #define USE_DMA_RAM
+// #define USE_USB_MSC
+// #define USE_RTC_TIME
+// #define USE_PERSISTENT_MSC_RTC
+// #define USE_LATE_TASK_STATISTICS
+// #endif
 
-#ifdef STM32G4
-#define USE_RPM_FILTER
-#define USE_DYN_IDLE
-#define USE_OVERCLOCK
-#define USE_DYN_NOTCH_FILTER
-#define USE_ADC_INTERNAL
-#define USE_USB_MSC
-#define USE_USB_CDC_HID
-#define USE_MCO
-#define USE_DMA_SPEC
-#define USE_TIMER_MGMT
-#define USE_LATE_TASK_STATISTICS
-#endif
+// #ifdef STM32G4
+// #define USE_RPM_FILTER
+// #define USE_DYN_IDLE
+// #define USE_OVERCLOCK
+// #define USE_DYN_NOTCH_FILTER
+// #define USE_ADC_INTERNAL
+// #define USE_USB_MSC
+// #define USE_USB_CDC_HID
+// #define USE_MCO
+// #define USE_DMA_SPEC
+// #define USE_TIMER_MGMT
+// #define USE_LATE_TASK_STATISTICS
+// #endif
 
 #if defined(STM32F4) || defined(STM32F7) || defined(STM32H7) || defined(STM32G4)
 #define TASK_GYROPID_DESIRED_PERIOD     125 // 125us = 8kHz
@@ -257,27 +257,27 @@ extern uint8_t _dmaram_end__;
 // all the settings for classic build
 #if !defined(CLOUD_BUILD) && !defined(SITL)
 
-#define USE_MAG
+// #define USE_MAG
 
-#if !defined(USE_BARO) && !defined(USE_FAKE_BARO)
-#define USE_BARO
+// #if !defined(USE_BARO) && !defined(USE_FAKE_BARO)
+// #define USE_BARO
 
-#define USE_BARO_MS5611
-#define USE_BARO_SPI_MS5611
-#define USE_BARO_BMP280
-#define USE_BARO_SPI_BMP280
-#define USE_BARO_BMP388
-#define USE_BARO_SPI_BMP388
-#define USE_BARO_LPS
-#define USE_BARO_SPI_LPS
-#define USE_BARO_QMP6988
-#define USE_BARO_SPI_QMP6988
-#define USE_BARO_DPS310
-#define USE_BARO_SPI_DPS310
-#define USE_BARO_BMP085
-#define USE_BARO_2SMBP_02B
-#define USE_BARO_SPI_2SMBP_02B
-#endif
+// #define USE_BARO_MS5611
+// #define USE_BARO_SPI_MS5611
+// #define USE_BARO_BMP280
+// #define USE_BARO_SPI_BMP280
+// #define USE_BARO_BMP388
+// #define USE_BARO_SPI_BMP388
+// #define USE_BARO_LPS
+// #define USE_BARO_SPI_LPS
+// #define USE_BARO_QMP6988
+// #define USE_BARO_SPI_QMP6988
+// #define USE_BARO_DPS310
+// #define USE_BARO_SPI_DPS310
+// #define USE_BARO_BMP085
+// #define USE_BARO_2SMBP_02B
+// #define USE_BARO_SPI_2SMBP_02B
+// #endif
 
 #if !defined(USE_GYRO) && !defined(USE_ACC)
 #define USE_ACC
@@ -322,14 +322,14 @@ extern uint8_t _dmaram_end__;
 #define USE_MAX7456
 #endif
 
-#if !defined(USE_RX_SPI)
-#define USE_RX_SPI
+// #if !defined(USE_RX_SPI)
+// #define USE_RX_SPI
 
-#define USE_RX_CC2500
-#define USE_RX_EXPRESSLRS
-#define USE_RX_SX1280
-#define USE_RX_SX127X
-#endif // !USE_RX_SPI
+// #define USE_RX_CC2500
+// #define USE_RX_EXPRESSLRS
+// #define USE_RX_SX1280
+// #define USE_RX_SX127X
+// #endif // !USE_RX_SPI
 
 #if !defined(USE_EXST) && !defined(USE_SDCARD)
 #define USE_SDCARD
@@ -346,7 +346,7 @@ extern uint8_t _dmaram_end__;
 #define USE_RANGEFINDER_TF
 #endif
 
-#define USE_RX_PPM
+// #define USE_RX_PPM
 #define USE_RX_PWM
 
 #define USE_BRUSHED_ESC_AUTODETECT  // Detect if brushed motors are connected and set defaults appropriately to avoid motors spinning on boot
@@ -357,33 +357,33 @@ extern uint8_t _dmaram_end__;
 
 #define USE_SERIALRX
 #define USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
-#define USE_SERIALRX_GHST       // ImmersionRC Ghost Protocol
-#define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
-#define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
-#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
-#define USE_SERIALRX_FPORT      // FrSky FPort
-#define USE_SERIALRX_XBUS       // JR
-#define USE_SERIALRX_SRXL2      // Spektrum SRXL2 protocol
+// #define USE_SERIALRX_GHST       // ImmersionRC Ghost Protocol
+// #define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+// #define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+// #define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+// #define USE_SERIALRX_FPORT      // FrSky FPort
+// #define USE_SERIALRX_XBUS       // JR
+// #define USE_SERIALRX_SRXL2      // Spektrum SRXL2 protocol
 
 #endif // !defined(USE_SERIAL_RX)
 
 #if !defined(USE_TELEMETRY)
 #define USE_TELEMETRY
 
-#define USE_TELEMETRY_FRSKY_HUB
-#define USE_TELEMETRY_SMARTPORT
+// #define USE_TELEMETRY_FRSKY_HUB
+// #define USE_TELEMETRY_SMARTPORT
 #define USE_TELEMETRY_CRSF
-#define USE_TELEMETRY_GHST
-#define USE_TELEMETRY_SRXL
+// #define USE_TELEMETRY_GHST
+// #define USE_TELEMETRY_SRXL
 
 #endif // !defined(USE_TELEMETRY)
 
-#define USE_SERVOS
+// #define USE_SERVOS
 
 #define USE_VTX
 #define USE_OSD
 #define USE_OSD_SD
-#define USE_OSD_HD
+// #define USE_OSD_HD
 #define USE_BLACKBOX
 
 #if TARGET_FLASH_SIZE > 512
@@ -398,8 +398,8 @@ extern uint8_t _dmaram_end__;
 
 #if defined(USE_TELEMETRY)
 
-#define USE_TELEMETRY_IBUS
-#define USE_TELEMETRY_IBUS_EXTENDED
+// #define USE_TELEMETRY_IBUS
+// #define USE_TELEMETRY_IBUS_EXTENDED
 #define USE_TELEMETRY_JETIEXBUS
 #define USE_TELEMETRY_MAVLINK
 #define USE_TELEMETRY_HOTT
@@ -412,25 +412,25 @@ extern uint8_t _dmaram_end__;
 #define USE_EMFAT_AUTORUN
 #define USE_EMFAT_ICON
 #define USE_ESCSERIAL_SIMONK
-#define USE_GPS
-#define USE_GPS_PLUS_CODES
-#define USE_LED_STRIP
+// #define USE_GPS
+// #define USE_GPS_PLUS_CODES
+// #define USE_LED_STRIP
 #define USE_SERIAL_4WAY_SK_BOOTLOADER
 #endif
 
 #endif // !defined(CLOUD_BUILD)
 
-#if !defined(LED_MAX_STRIP_LENGTH)
-#ifdef USE_LED_STRIP_64
-#define LED_MAX_STRIP_LENGTH           64
-#else
-#define LED_MAX_STRIP_LENGTH           32
-#endif
-#endif // # !defined(LED_MAX_STRIP_LENGTH)
+// #if !defined(LED_MAX_STRIP_LENGTH)
+// #ifdef USE_LED_STRIP_64
+// #define LED_MAX_STRIP_LENGTH           64
+// #else
+// #define LED_MAX_STRIP_LENGTH           32
+// #endif
+// #endif // # !defined(LED_MAX_STRIP_LENGTH)
 
-#if defined(USE_LED_STRIP)
-#define USE_LED_STRIP_STATUS_MODE
-#endif
+// #if defined(USE_LED_STRIP)
+// #define USE_LED_STRIP_STATUS_MODE
+// #endif
 
 #if defined(USE_SDCARD)
 #define USE_SDCARD_SPI
@@ -452,7 +452,7 @@ extern uint8_t _dmaram_end__;
 #define USE_VTX_COMMON
 #define USE_VTX_CONTROL
 #define USE_VTX_SMARTAUDIO
-#define USE_VTX_TRAMP
+// #define USE_VTX_TRAMP
 #define USE_VTX_MSP
 #define USE_VTX_TABLE
 #endif // USE_VTX
@@ -493,16 +493,16 @@ extern uint8_t _dmaram_end__;
 #define USE_THRUST_LINEARIZATION
 #define USE_TPA_MODE
 
-#ifdef USE_SERIALRX_SPEKTRUM
-#define USE_SPEKTRUM_BIND
-#define USE_SPEKTRUM_BIND_PLUG
-#define USE_SPEKTRUM_REAL_RSSI
-#define USE_SPEKTRUM_FAKE_RSSI
-#define USE_SPEKTRUM_RSSI_PERCENT_CONVERSION
-#define USE_SPEKTRUM_VTX_CONTROL
-#define USE_SPEKTRUM_VTX_TELEMETRY
-#define USE_SPEKTRUM_CMS_TELEMETRY
-#endif // USE_SERIALRX_SPEKTRUM
+// #ifdef USE_SERIALRX_SPEKTRUM
+// #define USE_SPEKTRUM_BIND
+// #define USE_SPEKTRUM_BIND_PLUG
+// #define USE_SPEKTRUM_REAL_RSSI
+// #define USE_SPEKTRUM_FAKE_RSSI
+// #define USE_SPEKTRUM_RSSI_PERCENT_CONVERSION
+// #define USE_SPEKTRUM_VTX_CONTROL
+// #define USE_SPEKTRUM_VTX_TELEMETRY
+// #define USE_SPEKTRUM_CMS_TELEMETRY
+// #endif // USE_SERIALRX_SPEKTRUM
 
 #define USE_BOARD_INFO
 #define USE_RTC_TIME
@@ -544,11 +544,11 @@ extern uint8_t _dmaram_end__;
 
 #endif // !defined(CORE_BUILD)
 
-#ifdef USE_GPS
-#define USE_GPS_NMEA
-#define USE_GPS_UBLOX
-#define USE_GPS_RESCUE
-#endif // USE_GPS
+// #ifdef USE_GPS
+// #define USE_GPS_NMEA
+// #define USE_GPS_UBLOX
+// #define USE_GPS_RESCUE
+// #endif // USE_GPS
 
 
 #if (defined(USE_OSD_HD) || defined(USE_OSD_SD)) && !defined(USE_OSD)
@@ -580,9 +580,9 @@ extern uint8_t _dmaram_end__;
 #define USE_OSD_PROFILES
 #define USE_OSD_STICK_OVERLAY
 
-#if defined(USE_GPS)
-#define USE_CMS_GPS_RESCUE_MENU
-#endif
+// #if defined(USE_GPS)
+// #define USE_CMS_GPS_RESCUE_MENU
+// #endif
 
 #endif // defined(USE_OSD)
 
